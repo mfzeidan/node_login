@@ -242,13 +242,13 @@ client.setServer(the_mqtt_server, 1883);
 }
 
   // put your main code here, to run repeatedly:
-  Serial.println("test");
-  Serial.println("user name");
-  Serial.println(mqtt_server);
-  Serial.println("amazon link");
-  Serial.println(mqtt_port);
-  Serial.println("user name");
-  Serial.println(the_mqtt_server);
+  //Serial.println("test");
+  //Serial.println("user name");
+ // Serial.println(mqtt_server);
+  //Serial.println("amazon link");
+  //Serial.println(mqtt_port);
+  //Serial.println("user name");
+  //Serial.println(the_mqtt_server);
 
   String message_to_send = String("{") + String("\"DeviceInfo\"") + String(":[{\"DeviceID\":\"") +  String(device_id) + "\", \"Current_Weight\":\"" + String(weight_measure) + "\"}]}";
   //String message_to_send = String(mqtt_server) + " " + String(mqtt_port);
