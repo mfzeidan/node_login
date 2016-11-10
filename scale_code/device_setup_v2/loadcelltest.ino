@@ -3,6 +3,8 @@
 #define DOUT  12
 #define CLK  14
 
+//https://www.youtube.com/watch?v=ldwCY-koNyA
+
 // INSTRUCTIONS
 // HOW TO CALIBRATE YOUR SCALE
 
@@ -43,4 +45,10 @@ void setup(){
 
 void loop(){
   
+   
+   //after you get your seed value, remove cale.set_scale(); from above and put cale.set_scale(seed_X);
+   // then remove scale.tare(); from above and paste it here
+   Serial.println(//variable);
+   delay(500);
+   
 }
