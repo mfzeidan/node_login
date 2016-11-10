@@ -59,6 +59,12 @@ void loop(){
    
    //after you get your seed value, remove cale.set_scale(); from above and put cale.set_scale(seed_X);
    // then remove scale.tare(); from above and paste it here
+   
+   scale.set_scale();
+
+
+   Serial.println(scale.get_units(10));
+   
    Serial.println(//variable);
    delay(500);
    
