@@ -3,8 +3,19 @@
 #define DOUT  12
 #define CLK  14
 
-//https://www.youtube.com/watch?v=ldwCY-koNyA
+//3.3V —- VCC
 
+//GPIO14 — SCK
+
+//GPIO12 — DT
+
+//GND —- GND
+
+
+
+
+//https://www.youtube.com/watch?v=ldwCY-koNyA
+//https://www.youtube.com/watch?v=nGUpzwEa4vg
 // INSTRUCTIONS
 // HOW TO CALIBRATE YOUR SCALE
 
