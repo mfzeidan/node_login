@@ -13,6 +13,14 @@
 // Adjust the parameter above until you get an accurate reading
 
 
+// The first time you get this you should get a number like -44000.00 or something
+// for example, if you placed 10gs on this, you would do
+
+// -44000/10 and will give you X
+
+// Pass X into  scale.set_scale(X);
+
+
 
 HX711 scale(DOUT, CLK);
 
