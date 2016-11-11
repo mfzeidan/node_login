@@ -18,6 +18,8 @@ cant connect to wifi
 
   red light on for 5 seconds 
 
+--done
+
 incorrect wifi password
 
   3 long red lights
@@ -29,20 +31,26 @@ ip address wont work
 connected to wifi
 
   5 green blinks
+  
+  --done 
 
 cant connect to mqtt server
 
   3 2 quick red lights in succession
+  
+  --done
 
 reconnected to mqtt server
 
   3 2 quick green lights in succession
+ 
+  --done
 
 message was just published
 
   2 long green lights
 
-
+-- done
 
 
 
