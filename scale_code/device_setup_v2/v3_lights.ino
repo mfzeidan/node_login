@@ -140,6 +140,25 @@ void setup() {
 
   //if you get here you have connected to the WiFi
   Serial.println("connected...yeey :)");
+    digitalWrite(4, HIGH);
+    delay(500);
+    digitalWrite(4, LOW);
+    delay(500);
+    digitalWrite(4, HIGH);
+    delay(500);
+    digitalWrite(4, LOW);
+    delay(500);
+      digitalWrite(4, HIGH);
+    delay(500);
+    digitalWrite(4, LOW);
+    delay(500);
+    digitalWrite(4, HIGH);
+    delay(500);
+    digitalWrite(4, LOW);
+    delay(500);
+      digitalWrite(4, HIGH);
+    delay(500);
+    digitalWrite(4, LOW);
 
   //read updated parameters
   strcpy(mqtt_server, custom_mqtt_server.getValue());
