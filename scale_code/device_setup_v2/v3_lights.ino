@@ -130,7 +130,9 @@ void setup() {
   //and goes into a blocking loop awaiting configuration
   if (!wifiManager.autoConnect(device_id, "password")) {
     Serial.println("failed to connect and hit timeout");
-    delay(3000);
+    digitalWrite(12, HIGH);
+    delay(5000);
+    digitalWrite(12, LOW);
     //reset and try again, or maybe put it to deep sleep
     //ESP.reset();
     //delay(5000);
