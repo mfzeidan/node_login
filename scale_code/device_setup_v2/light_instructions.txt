@@ -1,8 +1,18 @@
 
 red light is pin 12
 
+    digitalWrite(12, HIGH);
+    delay(300);
+    digitalWrite(12, LOW);
+    delay(300);
+
+
 green light is pin 4
 
+    digitalWrite(4, HIGH);
+    delay(300);
+    digitalWrite(4, LOW);
+    delay(300);
 
 cant connect to wifi
 
