@@ -1,4 +1,8 @@
 
+red light is pin 12
+
+green light is pin 4
+
 
 cant connect to wifi
 
