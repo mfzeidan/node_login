@@ -210,13 +210,17 @@ void reconnect() {
 
             //flash green light to say that we are connected again
             
-                digitalWrite(12, HIGH);
+                digitalWrite(4, HIGH);
                 delay(200);
-                digitalWrite(12, LOW);
+                digitalWrite(4, LOW);
                 delay(200);
-                digitalWrite(12, HIGH);
+                digitalWrite(4, HIGH);
                 delay(200);
-                digitalWrite(12, LOW);
+                digitalWrite(4, LOW);
+                delay(200);
+                digitalWrite(4, HIGH);
+                delay(200);
+                digitalWrite(4, LOW);
                 delay(200);
                 
         } else {
@@ -224,21 +228,22 @@ void reconnect() {
             Serial.print(client.state());
             Serial.println(" try again in 5 seconds");
             // Wait 5 seconds before retrying
-            delay(5000);
-                digitalWrite(4, HIGH);
+
+                digitalWrite(12, HIGH);
                 delay(200);
-                digitalWrite(4, LOW);
-                delay(200);
-          delay(750);
-                digitalWrite(4, HIGH);
-                delay(200);
-                digitalWrite(4, LOW);
+                digitalWrite(12, LOW);
                 delay(200);
           delay(750);
-                digitalWrite(4, HIGH);
+                digitalWrite(12, HIGH);
                 delay(200);
-                digitalWrite(4, LOW);
+                digitalWrite(12, LOW);
                 delay(200);
+          delay(750);
+                digitalWrite(12, HIGH);
+                delay(200);
+                digitalWrite(12, LOW);
+                delay(200);
+                      delay(5000);
         }
     }
 }
@@ -263,18 +268,23 @@ client.setServer(the_mqtt_server, 1883);
   //Serial.println(message_to_send);
 
   
-  digitalWrite(12, HIGH);
-  delay(300);
-   digitalWrite(12, LOW);
-  delay(300);
+
   //pubMQTT("1_purchase",message_to_send);
     //pubMQTT("1_purchase",mqtt_server);
   pubMQTT("testing1",message_to_send);
-  delay(5000);
+  
+    digitalWrite(4, HIGH);
+  delay(1000);
+   digitalWrite(4, LOW);
+  delay(1000);
+ 
    client.loop();
-    digitalWrite(12, HIGH);
-    delay(300);
-    digitalWrite(12, LOW);
+    digitalWrite(4, HIGH);
+    delay(1000);
+    digitalWrite(4, LOW);
    delay(1000);  
+  
+  
+   delay(5000);
 
 }
