@@ -170,20 +170,20 @@ void setup() {
   //Serial.println(mqtt_server);
 
   //Serial.println(custom_mqtt_port);
-  digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
+    digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
   delay(300);
-  digitalWrite(12, HIGH);
-  delay(300);
-    digitalWrite(12, LOW);
-    delay(300);
-      digitalWrite(12, HIGH);
+    digitalWrite(12, HIGH);
   delay(300);
     digitalWrite(12, LOW);
-    delay(300);
-      digitalWrite(12, HIGH);
+  delay(300);
+    digitalWrite(12, HIGH);
   delay(300);
     digitalWrite(12, LOW);
-    delay(300);
+  delay(300);
+    digitalWrite(12, HIGH);
+  delay(300);
+    digitalWrite(12, LOW);
+  delay(300);
   
 }
 
@@ -227,6 +227,12 @@ void reconnect() {
                 delay(200);
                 digitalWrite(4, LOW);
                 delay(200);
+          delay(750);
+                digitalWrite(4, HIGH);
+                delay(200);
+                digitalWrite(4, LOW);
+                delay(200);
+          delay(750);
                 digitalWrite(4, HIGH);
                 delay(200);
                 digitalWrite(4, LOW);
