@@ -14,7 +14,7 @@ PubSubClient client(espClient);
 #define the_mqtt_server "104.236.210.175"
 #define the_mqtt_user ""
 #define the_mqtt_password ""
-#define the_topic1 "purchase"
+#define the_topic1 "testing1"
 
 #define device_id "HX7500"
 
@@ -38,11 +38,11 @@ void saveConfigCallback () {
 
 void setup() {
   // put your setup code here, to run once:
-    pinMode(12, OUTPUT); // GREEN
-  pinMode(4, OUTPUT); //RED
+    pinMode(12, OUTPUT); // RED
+  pinMode(4, OUTPUT); //GREEN
   Serial.begin(115200);
 
-  digitalWrite(4, HIGH);   // turn the LED on (RED is the voltage level)
+  digitalWrite(12, HIGH);   // turn the LED on (RED is the voltage level)
     //client.setServer(the_mqtt_server, 1883);
     //pinMode(inputPin, INPUT);     // declare sensor as input
   Serial.println();
@@ -130,7 +130,9 @@ void setup() {
   //and goes into a blocking loop awaiting configuration
   if (!wifiManager.autoConnect(device_id, "password")) {
     Serial.println("failed to connect and hit timeout");
-    delay(3000);
+    digitalWrite(12, HIGH);
+    delay(5000);
+    digitalWrite(12, LOW);
     //reset and try again, or maybe put it to deep sleep
     //ESP.reset();
     //delay(5000);
@@ -138,6 +140,26 @@ void setup() {
 
   //if you get here you have connected to the WiFi
   Serial.println("connected...yeey :)");
+  digitalWrite(12, LOW);
+    digitalWrite(4, HIGH);
+    delay(200);
+    digitalWrite(4, LOW);
+    delay(200);
+    digitalWrite(4, HIGH);
+    delay(200);
+    digitalWrite(4, LOW);
+    delay(200);
+      digitalWrite(4, HIGH);
+    delay(200);
+    digitalWrite(4, LOW);
+    delay(200);
+    digitalWrite(4, HIGH);
+    delay(200);
+    digitalWrite(4, LOW);
+    delay(200);
+      digitalWrite(4, HIGH);
+    delay(200);
+    digitalWrite(4, LOW);
 
   //read updated parameters
   strcpy(mqtt_server, custom_mqtt_server.getValue());
@@ -170,20 +192,20 @@ void setup() {
   //Serial.println(mqtt_server);
 
   //Serial.println(custom_mqtt_port);
-  digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
+    digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
   delay(300);
-  digitalWrite(12, HIGH);
+    digitalWrite(4, HIGH);
   delay(300);
-    digitalWrite(12, LOW);
-    delay(300);
-      digitalWrite(12, HIGH);
+    digitalWrite(4, LOW);
   delay(300);
-    digitalWrite(12, LOW);
-    delay(300);
-      digitalWrite(12, HIGH);
+    digitalWrite(4, HIGH);
   delay(300);
-    digitalWrite(12, LOW);
-    delay(300);
+    digitalWrite(4, LOW);
+  delay(300);
+    digitalWrite(4, HIGH);
+  delay(300);
+    digitalWrite(4, LOW);
+  delay(300);
   
 }
 
@@ -208,13 +230,17 @@ void reconnect() {
 
             //flash green light to say that we are connected again
             
-                digitalWrite(12, HIGH);
+                digitalWrite(4, HIGH);
                 delay(200);
-                digitalWrite(12, LOW);
+                digitalWrite(4, LOW);
                 delay(200);
-                digitalWrite(12, HIGH);
+                digitalWrite(4, HIGH);
                 delay(200);
-                digitalWrite(12, LOW);
+                digitalWrite(4, LOW);
+                delay(200);
+                digitalWrite(4, HIGH);
+                delay(200);
+                digitalWrite(4, LOW);
                 delay(200);
                 
         } else {
@@ -222,15 +248,22 @@ void reconnect() {
             Serial.print(client.state());
             Serial.println(" try again in 5 seconds");
             // Wait 5 seconds before retrying
-            delay(5000);
-                digitalWrite(4, HIGH);
+
+                digitalWrite(12, HIGH);
                 delay(200);
-                digitalWrite(4, LOW);
+                digitalWrite(12, LOW);
                 delay(200);
-                digitalWrite(4, HIGH);
+          
+                digitalWrite(12, HIGH);
                 delay(200);
-                digitalWrite(4, LOW);
+                digitalWrite(12, LOW);
                 delay(200);
+          
+                digitalWrite(12, HIGH);
+                delay(200);
+                digitalWrite(12, LOW);
+                delay(200);
+                      delay(5000);
         }
     }
 }
@@ -255,18 +288,23 @@ client.setServer(the_mqtt_server, 1883);
   //Serial.println(message_to_send);
 
   
-  digitalWrite(12, HIGH);
-  delay(300);
-   digitalWrite(12, LOW);
-  delay(300);
+
   //pubMQTT("1_purchase",message_to_send);
     //pubMQTT("1_purchase",mqtt_server);
   pubMQTT("testing1",message_to_send);
-  delay(5000);
+  
+    digitalWrite(4, HIGH);
+  delay(200);
+   digitalWrite(4, LOW);
+  delay(200);
+ 
    client.loop();
-    digitalWrite(12, HIGH);
-    delay(300);
-    digitalWrite(12, LOW);
-   delay(1000);  
+    digitalWrite(4, HIGH);
+    delay(200);
+    digitalWrite(4, LOW);
+   delay(200);  
+  
+  
+   delay(5000);
 
 }
