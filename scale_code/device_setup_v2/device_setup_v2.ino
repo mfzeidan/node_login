@@ -38,7 +38,7 @@ void saveConfigCallback () {
 
 void setup() {
   // put your setup code here, to run once:
-    pinMode(12, OUTPUT); // RED
+  pinMode(12, OUTPUT); // RED
   pinMode(4, OUTPUT); //GREEN
   Serial.begin(115200);
 
@@ -193,19 +193,19 @@ void setup() {
 
   //Serial.println(custom_mqtt_port);
     digitalWrite(4, LOW);    // turn the LED off by making the voltage LOW
-  delay(300);
+  delay(200);
     digitalWrite(4, HIGH);
-  delay(300);
+  delay(200);
     digitalWrite(4, LOW);
-  delay(300);
+  delay(200);
     digitalWrite(4, HIGH);
-  delay(300);
+  delay(200);
     digitalWrite(4, LOW);
-  delay(300);
+  delay(200);
     digitalWrite(4, HIGH);
-  delay(300);
+  delay(200);
     digitalWrite(4, LOW);
-  delay(300);
+  delay(200);
   
 }
 
